@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+   function addFun() {
+      document.getElementById("result").value= eval(document.getElementById("n1").value)+eval(document.getElementById("n2").value);
+      document.getElementById("n1").value=""
+      document.getElementById("n2").value=""
+    }
+    </script>
+</head>
+<body>
+    <div>
+        1st Number :<input type="text" id="n1"/><br/>
+        2nd Number :<input type="text" id="n2"/><br/>
+        Result :<input type="text" id="result" readonly/><br/>
+        <input type="button" value="Add" onclick="addFun()"/>
+        <input type="button" value="Sub" onclick="subFun()"/>
+    </div>
+</body>
+</html>

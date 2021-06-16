@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function info() {
+            alert("Event fired....")
+        }
+        function displayName() {
+         //   alert("fun called...")
+         //var userName = document.ff.uname.value;
+         //alert("Welcome user "+userName);
+         //var userName = document.getElementsByName("uname")[0].value;
+         //alert("Welcome "+userName)
+         var userName = document.getElementById("uname").value;
+         alert("Welcome "+userName);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click Here!" onclick="info()"/>
+    <br/>
+    <form name="ff">
+        Name :<input type="text" name="uname" id="uname"/>
+        <input type="button" value="Display Name" onclick="displayName()"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    function validate() {
+        var userName = document.getElementById("user").value;
+        var passName = document.getElementById("pass").value;
+        if(userName.length==0){
+        document.getElementById("e1").innerHTML="User Name is required";
+        document.getElementById("e2").innerHTML=""
+            return false;
+        }else if (passName.length==0){
+        document.getElementById("e1").innerHTML=""
+        document.getElementById("e2").innerHTML = "Password is required";
+            return false;
+        }else {
+            return true;
+        }
+
+    }
+    </script>
+</head>
+<body>
+    <h2>Form Validation Using JavaScript</h2>
+    <form action="home.html" onsubmit="return validate()">
+        <label>UserName</label>
+    <input type="text" name="user" id="user"/><span id="e1" style="color:red;"></span>
+        <br/>
+        <label>Password</label>
+        <input type="password" name="pass" id="pass"/><span id="e2" style="color:red;"></span>
+        
+        <br/>
+        <input type="submit" value="submit"/>
+        <input type="reset" value="reset"/>
+    </form>
+    <br/>
+    <h2>Form Validation using HTML5 Features</h2>
+    <form action="home.html">
+        <label>Username</label>
+        <input type="text" name="user1" required><br/>
+        <label>Password</label>
+        <input type="password" name="pass1" required><br/>
+        <input type="submit" value="submit"/>
+        <input type="reset" value="reset"/>
+    </form>
+    <br/>
+    <h2>Application Page</h2>
+    <form action="home.html">
+        <label>FirstName</label>
+        <input type="text" name="fname" required minlength="2"/><br/>
+        <label>EmailId</label>
+        <input type="email" name="emailId" required/><br/>
+        <label>URL</label>
+        <input type="url" name="urlInfo" required/><br/>
+        <label>DOB</label>
+        <input type="date" name="ddInfo" required/><br/>
+        <input type="submit" value="submit"/>
+    </form>
+</body>
+</html>
+
+
+
+
+
