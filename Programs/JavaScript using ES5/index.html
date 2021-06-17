@@ -6,9 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--<script src="demo.js"></script>-->
-    <script src="user_defined_obj.js"></script>
+    <!--<script src="user_defined_obj.js"></script>-->
+    <!--<script src="window_object.js"></script>-->
+    <script src="Asynch_operation.js"></script>
 </head>
-<body>
-    
+<body onload="dis()">
+    <div id="dateId">
+
+    </div>
+    <!--
+    <input type="button" value="open" onclick="openWin()"/>
+    <input type="button" value="close" onclick="closeWin()"/>
+    -->
+    <!--<div id="obj">
+
+    </div>
+    <div id="obj1">
+
+    </div>-->
+<h1 id="obj" onmouseover="changeSize()" onmouseout="originalSize()">welcome to CSS Dynamic Effect</h1>
+<hr/>
+<img src="https://media.gettyimages.com/photos/camera-in-the-hands-of-a-white-woman-in-a-blue-dress-who-hid-in-the-picture-id1313805231?s=2048x2048" 
+width="100px" height="100px" onmouseover="inImage()" onmouseout="outImage()" id="mId"/>
 </body>
 </html>
