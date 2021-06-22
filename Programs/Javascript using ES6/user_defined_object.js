@@ -86,27 +86,52 @@
 // mgr1.disEmp();
 
 
-class Employee {
-    constructor(id,name,salary) {
-            this.id = id;
-            this.name = name;
-            this.salary = salary;
+// class Employee {
+//     constructor(id,name,salary) {
+//             this.id = id;
+//             this.name = name;
+//             this.salary = salary;
+//     }
+//     disEmp() {
+//         document.write("<br/>Employee class functions")
+//     document.write("<br/>id is "+this.id+" Name is "+this.name+"Salary is "+this.salary)
+//     }   
+// }
+// class Manager extends Employee{
+//     constructor(id,name,salary,numberOfEmp) {
+//         super(id,name,salary);      // using super passing value to employee class 
+//         this.numberOfEmp = numberOfEmp;             
+//     }
+//     disMgr() {
+//         document.write("<br> Manager class function")
+//         document.write("<br/> Number of employee working under him "+this.numberOfEmp)
+//     }
+// }
+// let mgr1 = new Manager(100,"Raju",45000,12);
+// mgr1.disEmp();
+// mgr1.disMgr();
+
+class Bike {
+    speed() {
+        document.write("<br/> 60km/hr")
     }
-    disEmp() {
-        document.write("<br/>Employee class functions")
-    document.write("<br/>id is "+this.id+" Name is "+this.name+"Salary is "+this.salary)
-    }   
 }
-class Manager extends Employee{
-    constructor(id,name,salary,numberOfEmp) {
-        super(id,name,salary);      // using super passing value to employee class 
-        this.numberOfEmp = numberOfEmp;             
-    }
-    disMgr() {
-        document.write("<br> Manager class function")
-        document.write("<br/> Number of employee working under him "+this.numberOfEmp)
+class HeroHonda extends Bike {
+
+}
+class Pulsar extends Bike {
+    speed() {                               // override the speed from Bike 
+        document.write("<br> 90km/hr")
     }
 }
-let mgr1 = new Manager(100,"Raju",45000,12);
-mgr1.disEmp();
-mgr1.disMgr();
+let hh = new HeroHonda();
+let pp = new Pulsar();
+hh.speed();
+pp.speed();
+
+
+
+
+
+
+
