@@ -1,0 +1,10 @@
+let obj = require("readline");
+let r1 = obj.createInterface({      // providing details about input and output device. 
+            input:process.stdin,
+            output:process.stdout
+});
+
+r1.question("Enter name",(name)=>{
+    console.log("Your name is "+name);
+    r1.close();
+})
