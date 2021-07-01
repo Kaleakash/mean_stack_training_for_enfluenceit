@@ -8,3 +8,14 @@ export function checkDetails(login:Login){
     }
 }
 
+/*
+
+insert into login values(login.userName,login.password);
+
+
+select * from login;
+
+
+query we have to convert sql query format to json format. 
+
+*/
