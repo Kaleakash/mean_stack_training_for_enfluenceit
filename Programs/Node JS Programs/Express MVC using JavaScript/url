@@ -1,0 +1,16 @@
+
+http://localhost:9090/api/project/getAllProjectDetails
+
+http://localhost:9090/api/project/getProjectById/100
+
+http://localhost:9090/api/project/getProjectById/1000
+
+http://localhost:9090/api/project/storeProjectDetails
+
+{"_id":103,"typeOfTech":"AI","numberOfEmp":15}
+
+http://localhost:9090/api/project/updateProductPrice/100
+
+
+http://localhost:9090/api/project/deleteProduct/100
+
