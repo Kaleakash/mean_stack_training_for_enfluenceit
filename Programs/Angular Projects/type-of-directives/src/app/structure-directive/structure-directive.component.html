@@ -1,0 +1,36 @@
+<div>
+    <h2>Structure directive</h2>
+    <h1>Welcome to *ngIf</h1>
+    <h1 *ngIf="false">Welcome to *ngIf</h1>
+    <h1 *ngIf="f1">Welcome to *ngIf with variable</h1>
+    <br/>
+    <input type="button" [value]="b1" (click)="changeValue()"/>
+    <br/>
+    <div *ngIf="flag">
+        <h1>This is div tag</h1>
+        <p>Simple messasge</p>
+        <app-contact-us></app-contact-us>
+    </div>
+    <hr/>
+    Names are {{stdNames}}<br/>
+    Name is {{stdNames[0]}}<br/>
+    <ul>
+        <li *ngFor="let std of stdNames">Name is {{std}}</li>
+    </ul>
+    <br/>
+    <p *ngFor="let std of stdNames">Name is {{std}}</p>
+    <br/>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.age}}</td>
+        </tr>
+    </table>
+</div>
+

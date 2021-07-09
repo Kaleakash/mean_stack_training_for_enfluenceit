@@ -1,0 +1,13 @@
+<div>
+    <h2>Attribute directive</h2>
+    <p style="color: red;">This is css effect apply using normal CSS style attribute</p>
+    <p [ngStyle]="{'color':'red'}">This is CSS effect apply using ngStyle attribute directive</p>
+    <p [ngStyle]="styleRules">This is CSS effect apply using ngStyle attribute directive</p>
+    <p class="abc">This is css class selector </p>
+    <p [ngClass]=" 'abc' ">This is a ngClass selector</p>
+    <p [ngClass]={mno:true}>This is ngClass selector with boolean property</p>
+    <p [ngClass]={mno:false,xyz:true}>This is ngClass selector with two class selector</p>
+    <input type="button" value="change effect" (click)="changeEffect()"/>
+    <br/>
+    <p [ngClass]={mno:f1,xyz:f2}>This is ngClass selector with two class selector</p>
+</div>
