@@ -1,0 +1,8 @@
+<div>
+    <input type="button" value="Load the Data" (click)="loadData()"/><br/>
+    <ul>
+        <li *ngFor="let p of projects">Id is {{p._id}},
+             Tech is {{p.typeOfTech}}
+            Number of Emp is {{p.numberOfEmp}}</li>
+    </ul>
+</div>

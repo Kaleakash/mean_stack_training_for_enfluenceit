@@ -2,6 +2,7 @@ import express,{Application} from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import {router as ProjectRouter} from './router/project.router';
+import cors from 'cors';
 
 let app:Application = express();
 let portNumber = 9090 || process.env.PORT;
@@ -9,7 +10,7 @@ let portNumber = 9090 || process.env.PORT;
 let url = "mongodb://localhost:27017/mydb123";
 
 app.use(bodyParser.json());
-
+app.use(cors());        // Enable CORS Orogin Policy 
 let option = {
     useUnifiedTopology: true,
     useNewUrlParser: true
