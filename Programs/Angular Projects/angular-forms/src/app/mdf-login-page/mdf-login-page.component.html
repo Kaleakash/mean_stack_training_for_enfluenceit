@@ -1,0 +1,26 @@
+<div>
+    <h2>Login Page using Model Driven Form</h2>
+    <form [formGroup]="loginRef">
+        <label>UserName</label>
+        <input type="text" formControlName="user"/>
+<span *ngIf="loginRef.controls.user.errors && 
+(loginRef.controls.user.dirty || loginRef.controls.user.touched)">
+<span [hidden]="!loginRef.controls.user.errors.required" style="color:red">User Name is required</span>
+<span [hidden]="!loginRef.controls.user.errors.minlength" style="color:red">Min length must be 3 character</span>
+</span>
+        <br/>
+        <label>Password</label>
+        <input type="password" formControlName="pass"/>
+        <span *ngIf="loginRef.controls.pass.errors && 
+        (loginRef.controls.pass.dirty || loginRef.controls.pass.touched)">
+        <span [hidden]="!loginRef.controls.pass.errors.required" style="color:red">Password is required required</span>
+        <span [hidden]="!loginRef.controls.pass.errors.pattern" style="color:red">Pattern must be match</span>
+        </span>
+        <br/>
+        <input type="button" value="Check User" (click)="checkUser()"
+        [disabled]="loginRef.invalid"/>
+        <input type="reset" value="reset"/>
+    </form>
+    <br/>
+    {{msg}}
+</div>
