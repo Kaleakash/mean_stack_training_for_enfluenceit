@@ -1,0 +1,10 @@
+<div>
+    <h2>Update Number of Employee In project</h2>
+    <form #projectRef="ngForm" (ngSubmit)="updateProject(projectRef)">
+        <label>Project Id</label>
+        <input type="text" name="_id" ngModel/><br/>
+        <label>Number Of Emp</label>
+        <input type="text" name="numberOfEmp" ngModel/><br/>
+        <input type="submit" value="update number of Emp"/>
+    </form>
+</div>

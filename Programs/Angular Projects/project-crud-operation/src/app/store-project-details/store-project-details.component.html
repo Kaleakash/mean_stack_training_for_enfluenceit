@@ -1,0 +1,14 @@
+<div>
+    <h2>Store Project Details</h2>
+    <form [formGroup]="projectRef" (ngSubmit)="storeProjectDetails()">
+        <label>Project Id</label>
+        <input type="text" formControlName="_id"/><br/>
+        <label>Type Of Project</label>
+        <input type="text" formControlName="typeOfTech"/><br/>
+        <label>Number of Emp</label>
+        <input type="text" formControlName="numberOfEmp"/><br/>
+        <input type="submit" value="store project details"/>
+    </form>
+    <br/>
+    {{msg}}
+</div>

@@ -5,4 +5,19 @@
              Tech is {{p.typeOfTech}}
             Number of Emp is {{p.numberOfEmp}}</li>
     </ul>
+    <hr/>
+    <div *ngIf="f1">
+    <table border="1">
+            <tr>
+                <th>PId</th>
+                <th>Type Of Tech</th>
+                <th>Number Of Emp</th>
+            </tr>
+            <tr *ngFor="let p of projects">
+                    <td>{{p._id}}</td>
+                    <td>{{p.typeOfTech}}</td>
+                    <td>{{p.numberOfEmp}}</td>
+            </tr>
+    </table>
+    </div>
 </div>

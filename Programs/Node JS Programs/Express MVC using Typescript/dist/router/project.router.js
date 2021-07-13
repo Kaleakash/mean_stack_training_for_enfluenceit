@@ -27,3 +27,7 @@ var express_1 = __importDefault(require("express"));
 var ProjectController = __importStar(require("../controller/project.controller"));
 exports.router = express_1.default.Router();
 exports.router.get("/getAppProjectDetails", ProjectController.getAllProjectDetail);
+exports.router.get("/getProjectById/:pid", ProjectController.getProjectDetailsById);
+exports.router.post("/storeProjectDetails", ProjectController.storeProjectDetails);
+exports.router.put("/updateProjectInfo/:pid", ProjectController.projectNumberOfEmployeeUpdate);
+exports.router.delete("/deleteProjectInfo/:pid", ProjectController.deleteProjectById);

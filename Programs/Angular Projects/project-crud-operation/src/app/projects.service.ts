@@ -20,4 +20,23 @@ export class ProjectsService {
   getAllProjectDetails():Observable<Projects[]> {
       return this.http.get<Projects[]>(this.rootUrl+"/getAppProjectDetails")
     }
+
+    // post method takes 2 parameter 
+    //1st url and 2nd json data.
+  storeProjectDetails(project:Projects):any{
+    return this.http.post(this.rootUrl+"/storeProjectDetails",{project},{responseType:'text'})
+  }
+  //put method take 2 parameter 
+  //1t url and 2nd json (partial json)
+  updateProject(project:Projects){
+    this.http.put(this.rootUrl+"/updateProjectInfo/"+project._id,project).
+    subscribe(result=>console.log(result),error=>console.log(error));
+  }
+
+  deleteProjectBId(id:any){
+    this.http.delete(this.rootUrl+"/deleteProjectInfo/"+id,{responseType:"text"}).
+    subscribe(result=>console.log(result),error=>console.log(error));
+  }
 }
+
+
