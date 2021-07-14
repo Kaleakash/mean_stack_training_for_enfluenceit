@@ -11,8 +11,15 @@
     <app-child1 [pName]="parentName" (em)="cAge=$event"></app-child1>
 
   <hr/>
-
+  <br/>
+  <input type="button" value="Call Child2 function"
+  (click)="callChildComponentFunction()"/>
+  Child2 Designation in parent component template {{childDesignation}}
+  <br/>
   <hr/>
     <app-child2></app-child2>
   <hr/>
+  <app-child3></app-child3>
+  <br/>
+  <app-child4></app-child4>
 </div>

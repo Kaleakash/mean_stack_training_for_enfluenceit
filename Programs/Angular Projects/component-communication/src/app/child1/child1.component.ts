@@ -14,7 +14,7 @@ export class Child1Component implements OnInit {
 
   @Output()
   em = new EventEmitter<number>();
-  
+
   constructor() { }
 
   ngOnInit(): void {
