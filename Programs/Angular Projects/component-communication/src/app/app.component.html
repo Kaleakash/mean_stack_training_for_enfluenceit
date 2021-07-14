@@ -1,0 +1,18 @@
+<div>
+  <h2>Component Commmunication</h2>
+  <h3>Parent Component</h3>
+  Name :<input type="text" #nameRef/><br/>
+  <input type="button" value="pass Value" (click)="passValue(nameRef)"/>
+  <br/>
+  Parent name in parent component is {{parentName}}<br/>
+  Child1 Age is {{cAge}}<br/>
+  <hr/>
+
+    <app-child1 [pName]="parentName" (em)="cAge=$event"></app-child1>
+
+  <hr/>
+
+  <hr/>
+    <app-child2></app-child2>
+  <hr/>
+</div>
