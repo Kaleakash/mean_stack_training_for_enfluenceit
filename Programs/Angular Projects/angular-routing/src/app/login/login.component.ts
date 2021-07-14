@@ -17,6 +17,8 @@ export class LoginComponent implements OnInit {
   checkUser(loginRef:NgForm){
     let login = loginRef.value;
     if(login.user =="Raj" && login.pass=="123"){
+        sessionStorage.setItem("key","Raj");    // value must be unqiue for different user 
+                                                 //emailId unique, sessionId or JWT    
         this.router.navigate(["home"]);
     }else {
         this.msg = "Invalid username or password"
