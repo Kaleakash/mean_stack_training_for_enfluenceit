@@ -1,0 +1,36 @@
+<div class="container">
+
+    Name is {{name}}<br/>
+    Name is {{name|uppercase}}<br/>
+    Name is {{name|lowercase}}<br/>
+    Salary is {{salary}}<br/>
+    Salary is {{salary | currency}}<br/>
+    Salary is {{salary | currency :'INR'}}<br/>
+    Date of joining is {{dob}}<br/>
+    Date of joining is {{dob|date}}<br/>
+    Date of joining is {{dob|date:'short'}}<br/>
+    Date of joining is {{dob|date:'long'}}<br/>
+    Date of joining is {{dob|date:'dd-MM-yyyy'}}<br/>
+    Date of joining is {{dob|date:'dd-MM-yyyy : HH:mm:ss'}}<br/>
+    Employee details is {{emp}}<br/>
+    Id is  {{emp.id}}<br/>
+    Name is {{emp.name}}<br/>
+    Employee details json format {{emp|json}}
+    <br/>
+    <table border="1" class="table">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr *ngFor="let emp of employees ">
+                <td>{{emp.id}}</td>
+                <td>{{emp.name | GenderPipe : emp.gender}}</td>
+                <td>{{emp.gender}}</td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.city}}</td>
+        </tr>
+    </table>
+</div>
