@@ -1,0 +1,12 @@
+<div>
+  <h2>Angular Life cycle example</h2>
+  Name is <input type="text" #nameRef/><br/>
+  <input type="button" value="change name" (click)="changeName(nameRef)"/>
+  <br/>
+  Name is {{name}}
+  <Br/>
+  <input type="button" value="click" (click)="change()"/><br/>
+  <div *ngIf="f1">
+    <app-child1 [parentName]="name"></app-child1>
+  </div>
+</div>
